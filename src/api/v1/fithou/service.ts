@@ -63,3 +63,14 @@ export const sendNotiForUserOfFithou = async (req: Request, next: NextFunction) 
     next(error);
   }
 };
+
+export const getTheNumberOfUsersFithouTool = async (req: Request, next: NextFunction) => {
+  try {
+    const aticles = await ArticlesModel.findOne();
+    const users = aticles?.subscribedIDs;
+
+    return users.length;
+  } catch (error) {
+    next(error);
+  }
+};

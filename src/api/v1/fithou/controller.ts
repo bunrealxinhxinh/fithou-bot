@@ -23,3 +23,12 @@ export const sendNotiForUserOfFithou = async (request: RequestWithUser, response
   const results = await service.sendNotiForUserOfFithou(request, next);
   response.send(fmt.formatResponse(results, Date.now() - request.startTime, 'OK', 1));
 };
+
+export const getTheNumberOfUsersFithouTool = async (
+  request: RequestWithUser,
+  response: Response,
+  next: NextFunction
+) => {
+  const results = await service.getTheNumberOfUsersFithouTool(request, next);
+  response.send(fmt.formatResponse(results, Date.now() - request.startTime, 'OK', 1));
+};
