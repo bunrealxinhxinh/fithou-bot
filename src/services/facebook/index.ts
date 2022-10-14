@@ -56,7 +56,7 @@ const sendLoginCtmsButton = async (id: string) => {
                 url: `${config.host}?id=${id}`,
                 title: 'Login',
                 messenger_extensions: true,
-                webview_height_ratio: 'compact',
+                webview_height_ratio: 'tall',
               },
             ],
           },
